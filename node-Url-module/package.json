@@ -1,0 +1,26 @@
+{
+  "name": "url-module",
+  "version": "1.0.0",
+  "description": "A demonstration of Node.js URL module with TypeScript",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "url",
+    "module"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
