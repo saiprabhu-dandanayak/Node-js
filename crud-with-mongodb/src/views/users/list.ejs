@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users List</title>
+</head>
+<body>
+  <h1>All Users</h1>
+  <ul>
+    <% users.forEach(user => { %>
+      <li><%= user.name %> - <%= user.email %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
