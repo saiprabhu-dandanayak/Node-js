@@ -1,0 +1,25 @@
+{
+  "name": "express-cookies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/nodemon": "^1.19.6",
+    "nodemon": "^3.1.9"
+  }
+}
