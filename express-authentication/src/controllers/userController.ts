@@ -11,16 +11,16 @@ export const registerUser = async (
   res: Response
 ): Promise<void> => {
   try {
-    const { username, email,age, password } = req.body;
+    const { name, email,age, password } = req.body;
 
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({where : { email} });
     if (existingUser) {
       res.status(400).json({ message: "User already exists!" });
       return;
     }
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
-    const newUser = new User({ username, email, age, password: hashedPassword });
+    const newUser = new User({ name, email, age, password: hashedPassword });
     await newUser.save();
     res.status(201).json({ message: "User registered successfully!" });
   } catch (error) {

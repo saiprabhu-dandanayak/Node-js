@@ -1,9 +1,11 @@
 import express, { Application } from "express";
 import userRoutes from "./routes/userRoutes";
-
+import { connectDb } from "./config/database";
 
 const app: Application = express();
 app.use(express.json());
+
+connectDb();
 
 app.use("/api/auth", userRoutes);
 
